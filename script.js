@@ -1,3 +1,5 @@
+var assert = require('assert');
+
 // Question 1
 
 // A fellow student shows you this code.  When he runs it, he expects it to
@@ -39,6 +41,14 @@ var byLength = function (A, B) {
 
 var sortedWords = words.sort(byLength);
 
+//Testing for Question 2
+try {
+  assert.deepEqual(sortedWords, ['long', 'short', 'medium', 'lengthy', 'interminable']);
+  console.log("Answer to question 2 is correct");
+}
+catch (e) {
+  console.log("Answer to question 2 isn't correct yet.");
+}
 
 
 /*===============================================================*/
@@ -52,7 +62,14 @@ var sortedWords = words.sort(function (A, B){
   // your code here
 });
 
-
+//Testing for Question 3
+try {
+  assert.deepEqual(sortedWords, ['interminable', 'lengthy', 'medium', 'short', 'long']);
+  console.log("Answer to question 3 is correct");
+}
+catch (e) {
+  console.log("Answer to question 3 isn't correct yet.");
+}
 
 /*===============================================================*/
 
@@ -82,28 +99,6 @@ function makePower(power) {
 var power2 = makePower(2);
 var power3 = makePower(3);
 
-/* TESTS==================================================================
-
-var assert = require('assert');
-
-//Testing for Question 2
-try {
-  assert.deepEqual(sortedWords, ['long', 'short', 'medium', 'lengthy', 'interminable']);
-  console.log("Answer to question 2 is correct");
-}
-catch (e) {
-  console.log("Answer to question 2 isn't correct yet.");
-}
-
-//Testing for Question 3
-try {
-  assert.deepEqual(sortedWords, ['interminable', 'lengthy', 'medium', 'short', 'long']);
-  console.log("Answer to question 3 is correct");
-}
-catch (e) {
-  console.log("Answer to question 3 isn't correct yet.");
-}
-
 //Testing for Question 4
 try {
   assert.strictEqual(power2(4), 16);
@@ -115,7 +110,6 @@ try {
 catch (e) {
   console.log("Answer to question 4 isn't correct yet.");
 }
-=========================================================================*/
 
 /*=======================================================================
 Adapted from "Callback Hell" by cwilbur and tsyan https://github.com/ga-wdi-boston/wdi_1_js_functions_first_class_quiz/blob/master/quiz.js
